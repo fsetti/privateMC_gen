@@ -5,6 +5,42 @@ def edit_pset_NMSSM( new , old ):
 	os.system('sed -i "s/%s/%s/g" /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/NMSSM/HIG-RunIISummer19UL18wmLHEGEN-00265_1_cfg_tmp.py'%(old,new))
 	os.system('mv /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/NMSSM/HIG-RunIISummer19UL18wmLHEGEN-00265_1_cfg_tmp.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/NMSSM/HIG-RunIISummer19UL18wmLHEGEN-00265_1_cfg_%s.py'%(new))
 
+def edit_pset_NMSSM_Ygg_Hbb( new , old , year):
+	if year == "2016":
+		os.system('cp /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_gg_H_bb/HIG-RunIISummer20UL16wmLHEGEN-03620_1_cfg.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_gg_H_bb/HIG-RunIISummer20UL16wmLHEGEN-03620_1_cfg_tmp.py')
+		os.system('sed -i "s/%s/%s/g"  /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_gg_H_bb/HIG-RunIISummer20UL16wmLHEGEN-03620_1_cfg_tmp.py'%(old,new))
+		os.system('mv /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_gg_H_bb/HIG-RunIISummer20UL16wmLHEGEN-03620_1_cfg_tmp.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_gg_H_bb/HIG-RunIISummer20UL16wmLHEGEN-03620_1_cfg_%s.py'%(new))
+	elif year == "2016_APV":
+		os.system('cp /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_gg_H_bb/HIG-RunIISummer20UL16wmLHEGENAPV-03311_1_cfg.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_gg_H_bb/HIG-RunIISummer20UL16wmLHEGENAPV-03311_1_cfg_tmp.py')
+		os.system('sed -i "s/%s/%s/g"  /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_gg_H_bb/HIG-RunIISummer20UL16wmLHEGENAPV-03311_1_cfg_tmp.py'%(old,new))
+		os.system('mv /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_gg_H_bb/HIG-RunIISummer20UL16wmLHEGENAPV-03311_1_cfg_tmp.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_gg_H_bb/HIG-RunIISummer20UL16wmLHEGENAPV-03311_1_cfg_%s.py'%(new))
+	elif year == "2017":
+		os.system('cp /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_gg_H_bb/HIG-RunIISummer20UL17wmLHEGEN-03541_1_cfg.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_gg_H_bb/HIG-RunIISummer20UL17wmLHEGEN-03541_1_cfg_tmp.py')
+		os.system('sed -i "s/%s/%s/g"  /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_gg_H_bb/HIG-RunIISummer20UL17wmLHEGEN-03541_1_cfg_tmp.py'%(old,new))
+		os.system('mv /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_gg_H_bb/HIG-RunIISummer20UL17wmLHEGEN-03541_1_cfg_tmp.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_gg_H_bb/HIG-RunIISummer20UL17wmLHEGEN-03541_1_cfg_%s.py'%(new))
+	elif year == "2018":
+		os.system('cp /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_gg_H_bb/HIG-RunIISummer20UL18wmLHEGEN-03585_1_cfg.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_gg_H_bb/HIG-RunIISummer20UL18wmLHEGEN-03585_1_cfg_tmp.py')
+		os.system('sed -i "s/%s/%s/g"  /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_gg_H_bb/HIG-RunIISummer20UL18wmLHEGEN-03585_1_cfg_tmp.py'%(old,new))
+		os.system('mv /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_gg_H_bb/HIG-RunIISummer20UL18wmLHEGEN-03585_1_cfg_tmp.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_gg_H_bb/HIG-RunIISummer20UL18wmLHEGEN-03585_1_cfg_%s.py'%(new))
+
+def edit_pset_NMSSM_Ybb_Hgg( new , old , year):
+	if year == "2016":
+		os.system('cp /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_bb_H_gg/HIG-RunIISummer20UL16wmLHEGEN-03620_1_cfg.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_bb_H_gg/HIG-RunIISummer20UL16wmLHEGEN-03620_1_cfg_tmp.py')
+		os.system('sed -i "s/%s/%s/g"  /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_bb_H_gg/HIG-RunIISummer20UL16wmLHEGEN-03620_1_cfg_tmp.py'%(old,new))
+		os.system('mv /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_bb_H_gg/HIG-RunIISummer20UL16wmLHEGEN-03620_1_cfg_tmp.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_bb_H_gg/HIG-RunIISummer20UL16wmLHEGEN-03620_1_cfg_%s.py'%(new))
+	elif year == "2016_APV":
+		os.system('cp /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_bb_H_gg/HIG-RunIISummer20UL16wmLHEGENAPV-03311_1_cfg.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_bb_H_gg/HIG-RunIISummer20UL16wmLHEGENAPV-03311_1_cfg_tmp.py')
+		os.system('sed -i "s/%s/%s/g"  /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_bb_H_gg/HIG-RunIISummer20UL16wmLHEGENAPV-03311_1_cfg_tmp.py'%(old,new))
+		os.system('mv /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_bb_H_gg/HIG-RunIISummer20UL16wmLHEGENAPV-03311_1_cfg_tmp.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_bb_H_gg/HIG-RunIISummer20UL16wmLHEGENAPV-03311_1_cfg_%s.py'%(new))
+	elif year == "2017":
+		os.system('cp /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_bb_H_gg/HIG-RunIISummer20UL17wmLHEGEN-03541_1_cfg.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_bb_H_gg/HIG-RunIISummer20UL17wmLHEGEN-03541_1_cfg_tmp.py')
+		os.system('sed -i "s/%s/%s/g"  /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_bb_H_gg/HIG-RunIISummer20UL17wmLHEGEN-03541_1_cfg_tmp.py'%(old,new))
+		os.system('mv /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_bb_H_gg/HIG-RunIISummer20UL17wmLHEGEN-03541_1_cfg_tmp.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_bb_H_gg/HIG-RunIISummer20UL17wmLHEGEN-03541_1_cfg_%s.py'%(new))
+	elif year == "2018":
+		os.system('cp /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_bb_H_gg/HIG-RunIISummer20UL18wmLHEGEN-03585_1_cfg.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_bb_H_gg/HIG-RunIISummer20UL18wmLHEGEN-03585_1_cfg_tmp.py')
+		os.system('sed -i "s/%s/%s/g"  /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_bb_H_gg/HIG-RunIISummer20UL18wmLHEGEN-03585_1_cfg_tmp.py'%(old,new))
+		os.system('mv /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_bb_H_gg/HIG-RunIISummer20UL18wmLHEGEN-03585_1_cfg_tmp.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/NMSSM_XYH_Y_bb_H_gg/HIG-RunIISummer20UL18wmLHEGEN-03585_1_cfg_%s.py'%(new))
+
 def edit_pset_gghh( new , old , year):
 	if year == "2016":
 		os.system('cp /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/ggf/HIG-RunIISummer20UL16wmLHEGEN-03485_1_cfg.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/ggf/HIG-RunIISummer20UL16wmLHEGEN-03485_1_cfg_tmp.py')
@@ -22,6 +58,24 @@ def edit_pset_gghh( new , old , year):
 		os.system('cp /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/ggf/HIG-RunIISummer20UL18wmLHEGEN-03457_1_cfg.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/ggf/HIG-RunIISummer20UL18wmLHEGEN-03457_1_cfg_tmp.py')
 		os.system('sed -i "s/%s/%s/g"  /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/ggf/HIG-RunIISummer20UL18wmLHEGEN-03457_1_cfg_tmp.py'%(old,new))
 		os.system('mv /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/ggf/HIG-RunIISummer20UL18wmLHEGEN-03457_1_cfg_tmp.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/ggf/HIG-RunIISummer20UL18wmLHEGEN-03457_1_cfg_%s.py'%(new))
+
+def edit_pset_bbgg( new , old , year):
+	if year == "2016":
+		os.system('cp /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/HHTo2B2G/HIG-RunIISummer20UL16wmLHEGEN-03485_1_cfg.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/HHTo2B2G/HIG-RunIISummer20UL16wmLHEGEN-03485_1_cfg_tmp.py')
+		os.system('sed -i "s/%s/%s/g"  /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/HHTo2B2G/HIG-RunIISummer20UL16wmLHEGEN-03485_1_cfg_tmp.py'%(old,new))
+		os.system('mv /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/HHTo2B2G/HIG-RunIISummer20UL16wmLHEGEN-03485_1_cfg_tmp.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/HHTo2B2G/HIG-RunIISummer20UL16wmLHEGEN-03485_1_cfg_%s.py'%(new))
+	elif year == "2016_APV":
+		os.system('cp /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/HHTo2B2G/HIG-RunIISummer20UL16wmLHEGENAPV-03182_1_cfg.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/HHTo2B2G/HIG-RunIISummer20UL16wmLHEGENAPV-03182_1_cfg_tmp.py')
+		os.system('sed -i "s/%s/%s/g"  /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/HHTo2B2G/HIG-RunIISummer20UL16wmLHEGENAPV-03182_1_cfg_tmp.py'%(old,new))
+		os.system('mv /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/HHTo2B2G/HIG-RunIISummer20UL16wmLHEGENAPV-03182_1_cfg_tmp.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/HHTo2B2G/HIG-RunIISummer20UL16wmLHEGENAPV-03182_1_cfg_%s.py'%(new))
+	elif year == "2017":
+		os.system('cp /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/HHTo2B2G/HIG-RunIISummer20UL17wmLHEGEN-03413_1_cfg.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/HHTo2B2G/HIG-RunIISummer20UL17wmLHEGEN-03413_1_cfg_tmp.py')
+		os.system('sed -i "s/%s/%s/g"  /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/HHTo2B2G/HIG-RunIISummer20UL17wmLHEGEN-03413_1_cfg_tmp.py'%(old,new))
+		os.system('mv /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/HHTo2B2G/HIG-RunIISummer20UL17wmLHEGEN-03413_1_cfg_tmp.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/HHTo2B2G/HIG-RunIISummer20UL17wmLHEGEN-03413_1_cfg_%s.py'%(new))
+	elif year == "2018":
+		os.system('cp /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/HHTo2B2G/HIG-RunIISummer20UL18wmLHEGEN-03457_1_cfg.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/HHTo2B2G/HIG-RunIISummer20UL18wmLHEGEN-03457_1_cfg_tmp.py')
+		os.system('sed -i "s/%s/%s/g"  /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/HHTo2B2G/HIG-RunIISummer20UL18wmLHEGEN-03457_1_cfg_tmp.py'%(old,new))
+		os.system('mv /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/HHTo2B2G/HIG-RunIISummer20UL18wmLHEGEN-03457_1_cfg_tmp.py /home/users/fsetti/public_html/privateMC_gen/cmsDrivers/UL20/HHTo2B2G/HIG-RunIISummer20UL18wmLHEGEN-03457_1_cfg_%s.py'%(new))
 
 def edit_pset_gghh_WW( new , old , year, decay):
 	if year == "2016":

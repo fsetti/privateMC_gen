@@ -15,7 +15,7 @@ parser.add_argument("--dsfilter", help = "only process mc/data with some name pa
 parser.add_argument("--soft_rerun", help = "don't remake tarball", action="store_true")
 args = parser.parse_args()
 
-from dsdefs_localminiaod_UL import dsdefs_signal
+from dsdefs_localminiaod_UL import NMSSM_and_HHbbgg_fixBug17 
 
 # some job configurations
 job_dir = "Summer20UL_nanoAODv9/"
@@ -39,9 +39,8 @@ if not args.soft_rerun:
 total_summary = {}
 while True:
     allcomplete = True
-
     # Loop through local samples
-    for ds,loc,fpo,args in dsdefs_signal[:]:
+    for ds,loc,fpo,args in NMSSM_and_HHbbgg_fixBug17[:]:
         sample = DirectorySample( dataset = ds, location = loc )
         files = [f.name for f in sample.get_files()]
         print "For sample %s in directory %s, there are %d input files" % (ds, loc, len(files))
@@ -76,6 +75,6 @@ while True:
         print "Job={} finished".format(job_tag)
         print ""
         break
-    sleep_time	= 1 * 60 * 60
+    sleep_time	= 1.5 * 60 * 60
     print "Sleeping " + str(sleep_time / 60) + " minutes ..."
     time.sleep(sleep_time)

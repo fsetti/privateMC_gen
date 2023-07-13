@@ -7,11 +7,11 @@ import time
 
 import sys
 sys.path.append("/home/users/fsetti/public_html/privateMC_gen")
-from update_pset_NMSSM import edit_pset_NMSSM, edit_pset_gghh, edit_pset_gghh_WW
+from update_pset_NMSSM import edit_pset_gghh, edit_pset_gghh_WW
 from allconfig import *
 
-years = ['2016', '2016_APV', '2017', '2018' ]
-#years = ['2017']
+#years = ['2016', '2016_APV', '2017', '2018' ]
+years = ['2017']
 
 condor_submit_params={
         #"sites": "SDSC-PRP", # other_sites can be good_sites, your own list, etc.
@@ -27,16 +27,15 @@ condor_submit_params={
 
 #condor_submit_params = {"sites" : "T2_US_UCSD,T2_US_CALTECH,T2_US_MIT,T2_US_WISCONSIN,T2_US_Nebraska,T2_US_Purdue,T2_US_Vanderbilt,T2_US_Florida",
 
-#couplings = [ 'cHHH0' , 'cHHH1' , 'cHHH2p45' , 'cHHH5' ]
-couplings = [ 'cHHH0' , 'cHHH1' ]					#####################uaf-8
-#couplings = [ 'cHHH2p45' , 'cHHH5' ]				#####################uaf-10 or uaf-1?
+#couplings = [ 'cHHH0' , 'cHHH1' ] #uaf-10 
+couplings = [ 'cHHH2p45' , 'cHHH5' ] #uaf-1
 decays = [ 'dileptonic' , 'semileptonic' ]
 
 def runall(special_dir, total_nevents, events_per_output):
 
 	for _ in range(2500):
 
-		proc_tag = "v2"
+		proc_tag = "fixBug17"
 
 		for coupling in couplings:
 			for year in years:
@@ -403,8 +402,8 @@ def runall(special_dir, total_nevents, events_per_output):
 					    total_summary[task.get_sample().get_datasetname()] = summary
 					StatsParser(data=total_summary, webdir="~/public_html/dump/metis/").do()
 
-		time.sleep(90*60)
+		time.sleep(120*60)
 
 
-runall("nanoAOD_runII_20UL", 400000, 250)
-#runall("nanoAOD_runII_20UL_test", 1, 1)
+runall("miniAOD_runII_20UL", 200000, 250)
+#runall("miniAOD_runII_20UL_test", 1, 1)

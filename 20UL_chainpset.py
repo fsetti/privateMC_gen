@@ -10,7 +10,7 @@ sys.path.append("/home/users/fsetti/public_html/privateMC_gen")
 from update_pset_NMSSM import edit_pset_NMSSM, edit_pset_gghh, edit_pset_gghh_WW
 from allconfig import *
 
-years = ['2016', '2016_APV', '2017', '2018' ]
+years = ['2017']
 
 condor_submit_params={
         #"sites": "SDSC-PRP", # other_sites can be good_sites, your own list, etc.
